@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: BS
+  datasource:
+    druid:
+#     p6spySql性能分析配置
+      driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:p6spy:mysql://82.156.52.129:3306/cqhttp?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: mon
+      password: 1472583690
+  mail:
+    host: smtp.qq.com
+    password: gosswakdhbjfbjfc
+    username: 85605964@qq.com
+    name: 蓝信推
+    default-encoding: utf-8
+    port: 25
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
